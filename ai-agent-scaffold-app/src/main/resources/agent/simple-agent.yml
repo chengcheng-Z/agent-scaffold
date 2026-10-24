@@ -1,0 +1,28 @@
+# 最小闭环样例：一个可被装配成可执行 Agent 的配置表
+ai:
+  agent:
+    config:
+      enabled: true
+      tables:
+        simpleAgent:
+          app-name: simpleAgent
+          agent:
+            agent-id: "simple-001"
+            agent-name: 简单助手
+            agent-desc: 最小闭环：一个可装配的 Agent
+          module:
+            ai-api:
+              base-url: https://api.deepseek.com
+              api-key: ${DEEPSEEK_API_KEY:test-key}
+              completions-path: v1/chat/completions
+              embeddings-path: v1/embeddings
+            chat-model:
+              model: deepseek-chat
+            agents:
+              - name: simpleAgentNode
+                description: 简单问答助手
+                instruction: |
+                  你是一个简单的问答助手，请用简洁的中文回答用户问题。
+                output-key: answer
+            runner:
+              agent-name: simpleAgentNode

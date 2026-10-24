@@ -10,6 +10,26 @@
     <artifactId>ai-agent-scaffold-domain</artifactId>
 
     <dependencies>
+        <!-- 装配责任链框架（小傅哥 wrench） -->
+        <dependency>
+            <groupId>cn.bugstack.wrench</groupId>
+            <artifactId>xfg-wrench-starter-design-framework</artifactId>
+        </dependency>
+        <!-- Google ADK：Agent 运行时 -->
+        <dependency>
+            <groupId>com.google.adk</groupId>
+            <artifactId>google-adk</artifactId>
+        </dependency>
+        <!-- ADK 对 Spring AI 模型的适配 -->
+        <dependency>
+            <groupId>com.google.adk</groupId>
+            <artifactId>google-adk-spring-ai</artifactId>
+        </dependency>
+        <!-- Spring AI OpenAI 协议客户端与聊天模型 -->
+        <dependency>
+            <groupId>org.springframework.ai</groupId>
+            <artifactId>spring-ai-openai</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
